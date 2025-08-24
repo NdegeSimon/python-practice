@@ -350,62 +350,72 @@
 
 # capitals.update({"Ethiopia":"Addis Ababa"})
 # print(capitals)
-import random
+# import random
 
-# Dice ASCII art
-dice_art = {
-    1: ("┌─────────┐",
-        "│         │",
-        "│    ●    │",
-        "│         │",
-        "└─────────┘"),
-    2: ("┌─────────┐",
-        "│  ●      │",
-        "│         │",
-        "│      ●  │",
-        "└─────────┘"),
-    3: ("┌─────────┐",
-        "│ ●       │",
-        "│    ●    │",
-        "│       ● │",
-        "└─────────┘"),
-    4: ("┌─────────┐",
-        "│ ●     ● │",
-        "│         │",
-        "│ ●     ● │",
-        "└─────────┘"),
-    5: ("┌─────────┐",
-        "│ ●     ● │",
-        "│    ●    │",
-        "│ ●     ● │",
-        "└─────────┘"),
-    6: ("┌─────────┐",
-        "│ ●     ● │",
-        "│ ●     ● │",
-        "│ ●     ● │",
-        "└─────────┘")
-}
+# # Dice ASCII art
+# dice_art = {
+#     1: ("┌─────────┐",
+#         "│         │",
+#         "│    ●    │",
+#         "│         │",
+#         "└─────────┘"),
+#     2: ("┌─────────┐",
+#         "│  ●      │",
+#         "│         │",
+#         "│      ●  │",
+#         "└─────────┘"),
+#     3: ("┌─────────┐",
+#         "│ ●       │",
+#         "│    ●    │",
+#         "│       ● │",
+#         "└─────────┘"),
+#     4: ("┌─────────┐",
+#         "│ ●     ● │",
+#         "│         │",
+#         "│ ●     ● │",
+#         "└─────────┘"),
+#     5: ("┌─────────┐",
+#         "│ ●     ● │",
+#         "│    ●    │",
+#         "│ ●     ● │",
+#         "└─────────┘"),
+#     6: ("┌─────────┐",
+#         "│ ●     ● │",
+#         "│ ●     ● │",
+#         "│ ●     ● │",
+#         "└─────────┘")
+# }
 
-dice = []
-total = 0
+# dice = []
+# total = 0
 
-num_of_dice = int(input("How many dice? "))
+# num_of_dice = int(input("How many dice? "))
 
-# Roll the dice
-for die in range(num_of_dice):
-    dice.append(random.randint(1, 6))
+# # Roll the dice
+# for die in range(num_of_dice):
+#     dice.append(random.randint(1, 6))
 
-print(f"\nYou rolled: {dice}")
+# print(f"\nYou rolled: {dice}")
 
-# Display dice art
-print("\nDice:")
-for i in range(5):  # Each dice art has 5 lines
-    for die_value in dice:
-        print(dice_art[die_value][i], end="  ")  # Print side by side
-    print()  # New line after each row
+# # Display dice art
+# print("\nDice:")
+# for i in range(5):  # Each dice art has 5 lines
+#     for die_value in dice:
+#         print(dice_art[die_value][i], end="  ")  # Print side by side
+#     print()  # New line after each row
 
-# Calculate total
-for die in dice:
-    total += die
+# # Calculate total
+# for die in dice:
+#     total += die
 
-print(f"\nTotal: {total}")
+# print(f"\nTotal: {total}")
+
+import math
+Guessed_number=10
+
+print("Welcome to The number Guessing Game!")
+
+number=(int("Im thinking of a number between 1-100 give me your best guess"))
+
+if number  < 1:
+print("Too low Try Again"):
