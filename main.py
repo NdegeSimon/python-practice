@@ -289,50 +289,123 @@
 
 # print("\nThank you for using the Grade Tracker!")
 
-movies=[]
-total_movies=[]
-ratings=[]
-total_ratings=0
-years=[]
+# Example numbers PAD
 
-print("=== MOVIE COLLECTION MANAGER===")
-while True:
-    movie_name = input("Enter movie name (exit to quit): ")
+# num_pad=((1,2,3),
+#          (4,5,6),
+#          (7,8,9),
+#          ("*",0,"#"))
+
+# for row in num_pad:
+#    for num in row:
+#       print(num, end="  ")
+#       print()
+# questions = ("What's the name of this Country:",
+#            "Which County is Amboseli Located:",
+#            "Best island to Visit in Africa:",
+#            "What's the World's Population:",
+#            "What company owns ChatGPT:")
+
+# options = (("A. Kenya", "B. Mombasa", "C. Tanzania", "D. Kasongo"),
+#           ("A. Kajiado", "B. Kisumu", "C. Nairobi", "D. Juba"),
+#           ("A. Zanzibar", "B. Eldoret", "C. Busia", "D. Kisumu"),
+#           ("A. 7 trillion", "B. 8 billion", "C. 1 Million", "D. 5656"),
+#           ("A. OpenAI", "B. ChatGPT", "C. Google", "D. LinkedIn"))
+
+# answers = ("A", "A", "A", "B", "A")
+# score = 0
+
+# for i in range(len(questions)):
+#     print(f"\n{questions[i]}")
+#     for option in options[i]:
+#         print(option)
     
-    if movie_name.lower() == "done":
-        break
+#     guess = input("Your answer (A, B, C, D): ").upper()
     
-    if movie_name == "":
-        print("Please enter a valid name.")
-        continue
-    movie_year=int(input("What year was it released:"))
+#     if guess == answers[i]:
+#         print("Correct!")
+#         score += 1
+#     else:
+#         print(f"Wrong! Answer was {answers[i]}")
 
-    if movie_year == "done":
-        break
-    
-    if movie_year == "":
-        print("Please enter a valid name.")
-        continue
+# print(f"\nFinal Score: {score}/{len(questions)}")
 
-    movie_rating=int(input("Enter Movie Rating:"))
+# DICTIONARIES IN PYTHON
 
-    if movie_rating == "done":
-        break
-    
-    if movie_rating == "":
-        print("Please enter a valid rating.")
-        continue
+# capitals={
+#     "Kenya":"Nairobi",
+#     "Uganda":"Kampala",
+#     "Tanzania":"Dodoma",
+#     "Rwanda":"Kigali",
+#     "Burundi":"Gitega"
 
-movies.append(movie_name)
-years.append(movie_year)
-ratings.append(movie_rating)
-
-total_movies+=movie_name
-total_ratings+=ratings /len(ratings)
-
-print("===MOVIES AND RATINGS ")
-print({movies}-{ratings})
+# }
 
 
 
+# print(capitals.get("Kenya"))
 
+# # capitals.pop("Burundi")
+# # print(capitals)
+
+# capitals.update({"Ethiopia":"Addis Ababa"})
+# print(capitals)
+import random
+
+# Dice ASCII art
+dice_art = {
+    1: ("┌─────────┐",
+        "│         │",
+        "│    ●    │",
+        "│         │",
+        "└─────────┘"),
+    2: ("┌─────────┐",
+        "│  ●      │",
+        "│         │",
+        "│      ●  │",
+        "└─────────┘"),
+    3: ("┌─────────┐",
+        "│ ●       │",
+        "│    ●    │",
+        "│       ● │",
+        "└─────────┘"),
+    4: ("┌─────────┐",
+        "│ ●     ● │",
+        "│         │",
+        "│ ●     ● │",
+        "└─────────┘"),
+    5: ("┌─────────┐",
+        "│ ●     ● │",
+        "│    ●    │",
+        "│ ●     ● │",
+        "└─────────┘"),
+    6: ("┌─────────┐",
+        "│ ●     ● │",
+        "│ ●     ● │",
+        "│ ●     ● │",
+        "└─────────┘")
+}
+
+dice = []
+total = 0
+
+num_of_dice = int(input("How many dice? "))
+
+# Roll the dice
+for die in range(num_of_dice):
+    dice.append(random.randint(1, 6))
+
+print(f"\nYou rolled: {dice}")
+
+# Display dice art
+print("\nDice:")
+for i in range(5):  # Each dice art has 5 lines
+    for die_value in dice:
+        print(dice_art[die_value][i], end="  ")  # Print side by side
+    print()  # New line after each row
+
+# Calculate total
+for die in dice:
+    total += die
+
+print(f"\nTotal: {total}")
