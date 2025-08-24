@@ -410,12 +410,45 @@
 
 # print(f"\nTotal: {total}")
 
-import math
-Guessed_number=10
+# import random  # ✅ Fixed: Import random, not math
 
-print("Welcome to The number Guessing Game!")
+# secret_number = random.randint(1, 100)
+# attempts = 7  # Start with 7 attempts
 
-number=(int("Im thinking of a number between 1-100 give me your best guess"))
+# print("Welcome to The Number Guessing Game!")
+# print("I'm thinking of a number between 1-100...")
 
-if number  < 1:
-print("Too low Try Again"):
+# # Main game loop - continue while player has attempts
+# while attempts > 0:  # ✅ Fixed: Should be > 0, not < 0
+    
+#     # Get player's guess INSIDE the loop
+#     guess = int(input(f"\nEnter your guess ({attempts} attempts left): "))
+    
+#     # Validate input range
+#     if guess < 1 or guess > 100:
+#         print("Guess is not in the specified criteria (1-100)!")
+#         attempts -= 1
+#         if attempts > 0:
+#             print(f"{attempts} attempts remaining")
+#         continue  # Skip to next iteration
+    
+#     # Check if guess is correct
+#     if guess == secret_number:
+#         print(f"🎉 CONGRATULATIONS! You guessed it!")
+#         print(f"The number was {secret_number}")
+#         break  # Exit loop - player won!
+    
+#     # Give feedback and reduce attempts
+#     elif guess < secret_number:
+#         print("Too low! Try higher.")
+#         attempts -= 1
+    
+#     else:  # guess > secret_number
+#         print("Too high! Try lower.")
+#         attempts -= 1
+
+# # Check if player ran out of attempts
+# if attempts == 0:
+#     print(f"\n💀 Game Over! The number was {secret_number}")
+
+# print("Thanks for playing!")
